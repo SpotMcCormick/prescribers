@@ -39,7 +39,7 @@ Questions and code is below
 	GROUP BY p2.specialty_description
 	ORDER BY total_claim_count DESC
 	
-	Nurse Practioniner
+Nurse Practioniner
 
  2C. Are there any specialties that appear in the prescriber table that have no associated prescriptions in the prescription table?
  
