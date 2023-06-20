@@ -10,16 +10,16 @@ Questions and code is below
     	ON p2.npi = p1.npi
 	GROUP BY p1.nppes_provider_last_org_name, p2.npi
 	ORDER BY claim_count DESC
-	LIMIT 1;'''
+	LIMIT 1;
 	
  99707
  
  1B. Repeat the above, but this time report the nppes_provider_first_name, nppes_provider_last_org_name,  specialty_description, and the total number of claims.
  
- --SELECT SUM(p2.total_claim_count) AS claim_count, p2.npi, p1.nppes_provider_last_org_name AS last_name, p1.nppes_provider_first_name AS first_name, p1.specialty_description
-   FROM prescriber as p1
-   INNER JOIN prescription AS p2
-    ON p2.npi = p1.npi
+ 	SELECT SUM(p2.total_claim_count) AS claim_count, p2.npi, p1.nppes_provider_last_org_name AS last_name, p1.nppes_provider_first_name AS first_name, p1.specialty_description
+   	FROM prescriber as p1
+   	INNER JOIN prescription AS p2
+    	ON p2.npi = p1.npi
 	GROUP BY p1.nppes_provider_last_org_name, p1.nppes_provider_first_name, p2.npi, p1.specialty_description
 	ORDER BY claim_count DESC
 	LIMIT 1;*
@@ -29,7 +29,7 @@ Questions and code is below
  2A. Which specialty had the most total number of claims (totaled over all drugs)?
  Which specialty had the most total number of claims (totaled over all drugs)?
 
- --SELECT SUM(p1.total_claim_count) AS total_claim_count, p2.specialty_description
+ 	SELECT SUM(p1.total_claim_count) AS total_claim_count, p2.specialty_description
 	FROM drug AS d
 	INNER JOIN prescription AS p1
 	USING(drug_name)
