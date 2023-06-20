@@ -10,7 +10,7 @@ Questions and code is below
     ON p2.npi = p1.npi
 	GROUP BY p1.nppes_provider_last_org_name, p2.npi
 	ORDER BY claim_count DESC
-	LIMIT 1;*
+	LIMIT 1;--
 	
  99707
  
