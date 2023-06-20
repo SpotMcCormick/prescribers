@@ -149,7 +149,7 @@ Nurse Practioniner
 
  5B.  Which cbsa has the largest combined population? Which has the smallest? Report the CBSA name and total population. 
 
-  SELECT c.cbsaname, SUM(p.population) AS total_pop
+ 	 SELECT c.cbsaname, SUM(p.population) AS total_pop
    	FROM cbsa AS c
    	INNER JOIN population AS p
    	USING (fipscounty)
