@@ -4,13 +4,13 @@ Questions and code is below
 
 1A.  Which prescriber had the highest total number of claims (totaled over all drugs)? Report the npi and the total number of claims.
 
-  --SELECT SUM(p2.total_claim_count) AS claim_count, p2.npi
+  '''SELECT SUM(p2.total_claim_count) AS claim_count, p2.npi
    FROM prescriber as p1
    INNER JOIN prescription AS p2
     ON p2.npi = p1.npi
 	GROUP BY p1.nppes_provider_last_org_name, p2.npi
 	ORDER BY claim_count DESC
-	LIMIT 1;--
+	LIMIT 1;'''
 	
  99707
  
